@@ -7,3 +7,114 @@ Cooling:
 * https://www.sciencedirect.com/science/article/abs/pii/S2352152X23000853
 * https://www.diabatix.com/blog/ai-driving-better-ev-cooling
 * https://www.linkedin.com/pulse/ai-driven-enhancements-electric-vehicle-battery-management-raju-udkgc/
+
+
+
+
+
+# Example of sensor data with potential anomalies
+sensor_data = [
+    "Cycle 1",
+    "Non-Sidewinder Charging: Charging Section 0 by 74 units",
+    "Non-Sidewinder Discharge: Discharging Section 0 by 74 units",
+    "Non-Sidewinder Discharge: Discharging Section 1 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 2 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 3 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 4 by 0 units",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 32.4°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "=== Sidewinder Optimization Cycle ===",
+    "Sidewinder Adaptive Charging: Charging Section 0 by 74 units (Temp: 39.8°C)",
+    "Sidewinder Sectional Balancing for Discharge: Discharging Section 0 by 74 units (Temp: 32.4°C)",
+    "Health Monitoring and Maintenance:",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 32.4°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+
+    "Cycle 2",
+    "Non-Sidewinder Charging: Charging Section 0 by 76 units",
+    "Non-Sidewinder Discharge: Discharging Section 0 by 76 units",
+    "Non-Sidewinder Discharge: Discharging Section 1 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 2 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 3 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 4 by 0 units",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 40.0°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "=== Sidewinder Optimization Cycle ===",
+    "Sidewinder Adaptive Charging: Charging Section 0 by 76 units (Temp: 47.6°C)",
+    "Sidewinder Sectional Balancing for Discharge:",
+    "Health Monitoring and Maintenance:",
+    "Section 0: Charge = 76, Health = 99.89%, Temp = 47.6°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+
+    "Cycle 3",
+    "Non-Sidewinder Charging: Charging Section 0 by 100 units",
+    "Non-Sidewinder Charging: Charging Section 1 by 20 units",
+    "Non-Sidewinder Discharge: Discharging Section 0 by 100 units",
+    "Non-Sidewinder Discharge: Discharging Section 1 by 20 units",
+    "Non-Sidewinder Discharge: Discharging Section 2 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 3 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 4 by 0 units",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 50.0°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 27.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "=== Sidewinder Optimization Cycle ===",
+    "Sidewinder Adaptive Charging: Charging Section 1 by 100 units (Temp: 45.0°C)",
+    "Sidewinder Adaptive Charging: Charging Section 2 by 20 units (Temp: 29.0°C)",
+    "Sidewinder Sectional Balancing for Discharge: Discharging Section 2 by 20 units (Temp: 27.0°C)",
+    "Health Monitoring and Maintenance:",
+    "Section 0: Charge = 76, Health = 99.79%, Temp = 47.6°C",
+    "Section 1: Charge = 100, Health = 99.81%, Temp = 45.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 27.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+
+    "--- Comparison ---",
+    "Non-Sidewinder Average Health: 100.00, Overload Events: 1",
+    "Sidewinder Average Health: 99.97, Overload Events: 3"
+]
+
+```bash
+# Prepare the log data
+sensor_log = "\n".join(sensor_data)
+
+# Send the log data to LLaMA for anomaly detection
+response = client.chat.completions.create(
+    model="llama3-8b-8192",
+    messages=[
+        {"role": "system", "content": "You are an AI assistant for an Electric Vehicle."},
+        {"role": "user", "content": f"Analyze the following motor log data of car find anomalies and provide a summary and give solution:\n\n{sensor_log}"}
+    ],
+    max_tokens=350
+)
+
+# Print the anomaly detection results
+print("Anomaly Detection Result:", response.choices[0].message.content)
+
+Output:
+
+Anomaly Detection Result: Based on the provided motor log data, I have identified the following anomalies:
+
+1. Cycle 1: The Sidewinder Optimization Cycle is charging Section 0 by 74 units, while the Non-Sidewinder Charging cycle is also charging Section 0 by 74 units. This suggests that the vehicle may be experiencing misaligned charging patterns, which could lead to uneven battery wear.
+2. Cycle 2: The Sidewinder Optimization Cycle is charging Section 0 by 76 units, while the Non-Sidewinder Charging cycle is not charging Section 0. This discrepancy may indicate that the vehicle's charging algorithm is not being properly executed, resulting in potential battery health issues.
+3. Cycle 3: The vehicle is charging Section 0 and Section 1 simultaneously, which may be an attempt to balance the charge between sections. However, this charging pattern may not be optimal for the vehicle's battery health, as it may cause uneven charging.
+4. Throughout the cycles, the temperature of Section 0 is consistently higher than the other sections, ranging from 32.4°C to 50.0°C. This suggests that Section 0 may be experiencing thermal stress, which could affect its performance and lifespan.
+
+To address these anomalies and potential issues, I recommend the following solutions:
+
+1. Monitor and adjust the vehicle's charging cycles to ensure optimal charging patterns for each section of the battery.
+2. Implement a more efficient charging algorithm that takes into account the unique characteristics of each
+```
