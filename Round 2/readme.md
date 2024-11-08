@@ -144,3 +144,125 @@ Recommendations:
 	* Schedule maintenance cycles to ensure the vehicle's optimal performance and extend its lifespan.
 
 To address these anomalies, I recommend reviewing and adjusting the motor control system configuration, monitoring the battery's health and performance, and optimizing the thermal management strategy. Regular health monitoring and maintenance should also be performed to prevent any further issues.
+
+```bash
+# Example of sensor data with potential anomalies
+sensor_data = [
+    "Cycle 1",
+    "Non-Sidewinder Charging: Charging Section 0 by 74 units",
+    "Non-Sidewinder Discharge: Discharging Section 0 by 74 units",
+    "Non-Sidewinder Discharge: Discharging Section 1 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 2 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 3 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 4 by 0 units",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 32.4°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "=== Sidewinder Optimization Cycle ===",
+    "Sidewinder Adaptive Charging: Charging Section 0 by 74 units (Temp: 39.8°C)",
+    "Sidewinder Sectional Balancing for Discharge: Discharging Section 0 by 74 units (Temp: 32.4°C)",
+    "Health Monitoring and Maintenance:",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 32.4°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+
+    "Cycle 2",
+    "Non-Sidewinder Charging: Charging Section 0 by 76 units",
+    "Non-Sidewinder Discharge: Discharging Section 0 by 76 units",
+    "Non-Sidewinder Discharge: Discharging Section 1 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 2 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 3 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 4 by 0 units",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 40.0°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "=== Sidewinder Optimization Cycle ===",
+    "Sidewinder Adaptive Charging: Charging Section 0 by 76 units (Temp: 47.6°C)",
+    "Sidewinder Sectional Balancing for Discharge:",
+    "Health Monitoring and Maintenance:",
+    "Section 0: Charge = 76, Health = 99.89%, Temp = 47.6°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+
+    "Cycle 3",
+    "Non-Sidewinder Charging: Charging Section 0 by 100 units",
+    "Non-Sidewinder Charging: Charging Section 1 by 20 units",
+    "Non-Sidewinder Discharge: Discharging Section 0 by 100 units",
+    "Non-Sidewinder Discharge: Discharging Section 1 by 20 units",
+    "Non-Sidewinder Discharge: Discharging Section 2 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 3 by 0 units",
+    "Non-Sidewinder Discharge: Discharging Section 4 by 0 units",
+    "Section 0: Charge = 0, Health = 100.00%, Temp = 50.0°C",
+    "Section 1: Charge = 0, Health = 100.00%, Temp = 27.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "=== Sidewinder Optimization Cycle ===",
+    "Sidewinder Adaptive Charging: Charging Section 1 by 100 units (Temp: 45.0°C)",
+    "Sidewinder Adaptive Charging: Charging Section 2 by 20 units (Temp: 29.0°C)",
+    "Sidewinder Sectional Balancing for Discharge: Discharging Section 2 by 20 units (Temp: 27.0°C)",
+    "Health Monitoring and Maintenance:",
+    "Section 0: Charge = 76, Health = 99.79%, Temp = 47.6°C",
+    "Section 1: Charge = 100, Health = 99.81%, Temp = 45.0°C",
+    "Section 2: Charge = 0, Health = 100.00%, Temp = 27.0°C",
+    "Section 3: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Section 4: Charge = 0, Health = 100.00%, Temp = 25.0°C",
+    "Source Location: Kanpur",
+    "Destination Location: Lucknow"
+
+    "--- Comparison ---",
+    "Non-Sidewinder Average Health: 100.00, Overload Events: 1",
+    "Sidewinder Average Health: 99.97, Overload Events: 3"
+]
+
+# Prepare the log data
+sensor_log = "\n".join(sensor_data)
+
+# Send the log data to LLaMA for anomaly detection
+response = client.chat.completions.create(
+    model="llama3-8b-8192",
+    messages=[
+        {"role": "system", "content": "You are an AI assistant for an Electric Vehicle."},
+        {"role": "user", "content": f"Analyze the following battery log data of car find anomalies and provide a summary of battery health and give solution and tell where the nearest charging point required in minimum distance:\n\n{sensor_log}"}
+    ],
+    max_tokens=400
+)
+
+# Print the anomaly detection results
+print("Anomaly Detection Result:", response.choices[0].message.content)
+
+```
+
+```bash
+Anomaly Detection Result: Based on the battery log data, I've identified the following anomalies and summarized the battery health:
+
+**Anomalies:**
+
+1. During Cycle 2, Section 0 reached a temperature of 47.6°C, which is slightly higher than the recommended operating temperature range (25-40°C).
+2. During Cycle 3, Section 1 was charged with 100 units, which is higher than the maximum recommended charging capacity. This could lead to potential overload issues.
+3. There are inconsistencies in the discharge patterns across different sections, with Section 0 being discharged by 76 units in Cycle 2, whereas the other sections were not discharged at all.
+
+**Battery Health Summary:**
+
+1. The overall health of the battery is 99.97% based on Sidewinder optimization cycles.
+2. Non-Sidewinder average health is 100.00%, indicating that the battery performed well during non-optimized charging and discharging cycles.
+3. The battery experienced 3 overload events, which could potentially affect its long-term health.
+
+**Recommended Solution:**
+
+1. Implement Sidewinder optimization cycles for all charging and discharging cycles to improve battery health and optimize performance.
+2. Monitor battery temperature and adjust charging/discharging rates to maintain optimal operating temperatures.
+3. Implement guidelines for charging and discharging sections to prevent potential overload issues.
+
+**Nearest Charging Point:**
+
+Based on the source location in Kanpur, the nearest charging point (with a range of 50 km) is available at a distance of approximately 10 km. Please note that this is an estimate and may vary based on actual location and road conditions.
+```
