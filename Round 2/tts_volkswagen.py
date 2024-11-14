@@ -1,3 +1,5 @@
+# pip install datasets
+
 from transformers import SpeechT5Processor, SpeechT5ForTextToSpeech, SpeechT5HifiGan
 from datasets import load_dataset
 import torch
@@ -7,10 +9,13 @@ from datasets import load_dataset
 processor = SpeechT5Processor.from_pretrained("microsoft/speecht5_tts")
 model = SpeechT5ForTextToSpeech.from_pretrained("microsoft/speecht5_tts")
 vocoder = SpeechT5HifiGan.from_pretrained("microsoft/speecht5_hifigan")
+text_list = [
+    "Hello, how are you today?",
+    "This is a test of text-to-speech conversion.",
+    "Have a great day!"
+]
 
-inputs = processor(text="Hello, my dog is cute.", return_tensors="pt")
-
-# load xvector containing speaker's voice characteristics from a dataset
+inputs = processor(text="\n".join(text_list), return_tensors="pt")
 embeddings_dataset = load_dataset("Matthijs/cmu-arctic-xvectors", split="validation")
 speaker_embeddings = torch.tensor(embeddings_dataset[7306]["xvector"]).unsqueeze(0)
 
