@@ -6,7 +6,7 @@ from transformers import SpeechT5Processor, SpeechT5ForTextToSpeech, SpeechT5Hif
 from datasets import load_dataset
 
 # Set OpenAI API key
-api_keyy="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"
+api_keyy="key"
 client=Groq(api_key=api_keyy)
 # Load Text-to-Speech models
 processor = SpeechT5Processor.from_pretrained("microsoft/speecht5_tts")
