@@ -16,7 +16,7 @@ from keras.layers import LSTM, Dense, Dropout
 import time
 
 # Initialize Groq client
-api_keyy = "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"
+api_keyy = "key"
 client = Groq(api_key=api_keyy)
 
 # Load models for Text-to-Speech (Driver Personalization)
