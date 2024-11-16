@@ -21,13 +21,13 @@ vocoder = SpeechT5HifiGan.from_pretrained("microsoft/speecht5_hifigan")
 embeddings_dataset = load_dataset("Matthijs/cmu-arctic-xvectors", split="validation")
 speaker_embeddings = torch.tensor(embeddings_dataset[7306]["xvector"]).unsqueeze(0)
 # Initialize battery pack with 8 cells, each with a charge level between 80-100% and temperature
-battery_pack = [{"charge": random.uniform(80, 100), "temp": random.uniform(25, 35)} for _ in range(8)]
+# battery_pack = [{"charge": random.uniform(80, 100), "temp": random.uniform(25, 35)} for _ in range(8)]
 min_charge = 20         # Minimum charge threshold to force resting
 base_charge_rate = 5    # Base rate at which resting cells are charged per cycle
 base_discharge_rate = 10  # Base rate at which active cells are discharged per cycle
 overload_threshold = 30  # Maximum total discharge rate to avoid overload
-temp_increase_rate = 2   # Temperature increase per cycle for active cells
-temp_cooling_rate = 1    # Temperature decrease per cycle for resting cells
+temp_increase_rate = 5   # Temperature increase per cycle for active cells
+temp_cooling_rate = 2    # Temperature decrease per cycle for resting cells
 overheat_temp = 50       # Maximum safe operating temperature
 target_distance = 1.0    # Target distance per cycle for efficient performance
 
@@ -41,12 +41,18 @@ distance_ranges = {
     'downhill': (1.0, 2.0)  # Longer distance, low drain
 }
 
+
+def initialize_battery_pack(battery_percent, battery_temp):
+    """Initialize the battery pack based on user input."""
+    # Divide the user input evenly across the 8 cells
+    battery_pack = [{"charge": battery_percent, "temp": battery_temp} for _ in range(8)]
+    return battery_pack
 def get_user_input():
     # Get battery percentage as a number input (between 80 and 100)
-    battery_percent = st.slider("Enter Battery Percentage", min_value=80, max_value=100, value=90)
+    battery_percent = st.slider("Enter Battery Percentage", min_value=5, max_value=100, value=90)
     
     # Get battery temperature as a number input (between 25 and 45 degrees Celsius)
-    battery_temp = st.slider("Enter Battery Temperature (°C)", min_value=25, max_value=45, value=30)
+    battery_temp = st.slider("Enter Battery Temperature (°C)", min_value=25, max_value=60, value=30)
     
     # Select driving condition from a dropdown
     conditions = ["Uphill", "Highway", "Traffic", "City", "Town", "Downhill"]
@@ -65,9 +71,9 @@ def get_user_input():
     
     return battery_percent, battery_temp, driving_condition, charge_rate, input_data
 
-def generate_alert(simulation_results):
+def generate_alert(simulation_results,prompt):
     """Generate an alert message using Groq."""
-    alert_prompt = f"Give a 10-word alert only for the following result: {simulation_results}"
+    alert_prompt = f"{prompt}:{simulation_results}"
     response = client.chat.completions.create(
         model="llama3-8b-8192",
         messages=[{"role": "user", "content": alert_prompt}],
@@ -168,6 +174,9 @@ def main():
         # Get the user input
         battery_percent, battery_temp, driving_condition, charge_rate, input_data = get_user_input()
 
+        # Initialize battery pack based on user input
+        global battery_pack
+        battery_pack = initialize_battery_pack(battery_percent, battery_temp)
         # Display input data
         st.write("Input Data:")
         for item in input_data:
@@ -192,7 +201,7 @@ def main():
             # Initialize result list
             result_data = []
 
-            for cycle in range(1, 31):  # Run for 10 cycles
+            for cycle in range(1, 16):  # Run for 10 cycles
                 # Get the cycle's distance and discharge rate based on driving condition
                 cycle_distance, discharge_rate = get_cycle_distance(driving_condition)
                 total_distance += cycle_distance  # Update total distance
@@ -236,9 +245,15 @@ def main():
 
         
             simulation_summary = f"Total Distance: {total_distance:.2f} km, Avg Battery: {avg_battery_level:.2f}%"
-            alert_text = generate_alert("\n".join(result_data))
+            alert="Give alert in 5 words only"
+            suggestion="Give suggestion in 6 words only, don't include numeric data"
+            alert_text = generate_alert("\n".join(result_data),alert)
             st.write(f"**Alert**: {alert_text}")
             generate_speech(alert_text)
+
+            suggestion_text=generate_alert("\n".join(result_data),suggestion)
+            st.write(f"**Suggestion**:{suggestion_text}")
+            generate_speech(suggestion_text)
     elif mode == "Performance Mode":
         st.write("### Performance Mode")
         st.write("In Performance Mode, the system prioritizes performance and speed, with higher charge and discharge rates to maximize the power available to the motor.")
