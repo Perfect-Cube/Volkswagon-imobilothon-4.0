@@ -6,6 +6,10 @@
 
 "To tackle these challenges and provide a superior driving experience, BEAM offers two advanced modes: Eco Mode and Performance Mode. Both modes are powered by intelligent algorithms designed to optimize battery and motor performance while ensuring the best balance of efficiency and driving satisfaction."
 
+# Simulation with User Input via Streamlit
+
+"To demonstrate BEAM’s capabilities, we’ve built an interactive simulation using Streamlit. Instead of relying on live sensor data, we take user input to simulate real-world conditions. Users can input variables like driving speed, route distance, and battery charge, and the system will simulate how BEAM optimizes energy usage in Eco and Performance Modes. This allows users to experience the benefits of BEAM’s intelligent algorithms and see how they affect battery health and motor performance in real-time."
+
 # Current-Generation Eco Mode
 
 "Today’s EV eco modes prioritize efficiency by heavily restricting throttle power, which sacrifices performance. Drivers are left with slower acceleration and reduced driving pleasure. While it saves energy, it doesn’t provide a balanced solution."
