@@ -1,7 +1,28 @@
 # Installation
-
+Please install the required libraries:
+* Streamlit
+* Matplotlib
+* Numpy
+* Transformers
+* JSON
+* Time
+* Random
+* Groq
+* Soundfile
+* Stable_baselines3
+* Shimmy
+* Gym
+* Gymnasium
+* Streamlit_lottie
+* Datasets
 # Working
+Here are the steps to run this project-
+1. Install the required the libraries mentioned above
+2. Download the pre-trained model "ppo_motor_model_dynamic.zip"
+3. Download the "main.py" file
+4. Use the command "streamlit run main.py" to run the main.py file
 
+__Note:__ Please ensure that the pre-trained model and main.py are in same folder.
 # Comparisons- BEAM vs Current Gen
 ![Sidewinder_Vs_Normal](https://github.com/user-attachments/assets/6b872d2f-e970-43fb-86f6-9b40ce0494b8)
 
