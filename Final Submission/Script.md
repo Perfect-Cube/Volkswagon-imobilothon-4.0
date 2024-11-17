@@ -16,7 +16,7 @@
 
 # BEAM’s Eco Mode
 
-"Our approach is inspired by the movement of the sidewinder snake, which minimizes contact and moves efficiently through wave propagation. BEAM’s AI detects battery cell modules within a pack and uses them selectively, ensuring minimal energy usage. This approach extends battery life, improves thermal performance, and enhances fault tolerance. With BEAM’s Eco Mode, drivers enjoy better efficiency without losing performance. Additionally, real-time alerts and notifications are displayed to keep drivers informed about battery usage, thermal conditions, and suggestions for optimal driving."
+"Our approach is inspired by the movement of the sidewinder snake, which minimizes contact and moves efficiently through wave propagation. BEAM’s AI detects batterycell modules within a pack and uses them selectively, ensuring minimal energy usage. This approach extends battery life, improves thermal performance, and enhances fault tolerance. With BEAM’s Eco Mode, drivers enjoy better efficiency without losing performance. Additionally, real-time alerts and notifications are displayed to keep drivers informed about battery usage, thermal conditions, and suggestions for optimal driving."
 
 # Current-Generation Performance Mode
 
