@@ -19,7 +19,7 @@ The process starts with sensor data from EVs and human feedback, which are prepr
 "Today’s EV eco modes prioritize efficiency by heavily restricting throttle power, which sacrifices performance. Drivers are left with slower acceleration and reduced driving pleasure. While it saves energy, it doesn’t provide a balanced solution."
 
 # BEAM’s Eco Mode
-"Our approach is inspired by the movement of the sidewinder snake, which minimizes contact and moves efficiently through wave propagation. BEAM’s AI detects batterycell modules within a pack and uses them selectively, ensuring minimal energy usage. This approach extends battery life, improves thermal performance, and enhances fault tolerance. With BEAM’s Eco Mode, drivers enjoy better efficiency without losing performance. Additionally, real-time alerts and notifications are displayed to keep drivers informed about battery usage, thermal conditions, and suggestions for optimal driving."
+Our approach is inspired by the movement of the sidewinder snake, which minimizes contact and moves efficiently through wave propagation. BEAM’s AI detects battery cell modules within a pack and uses them selectively, ensuring minimal energy usage. For instance, Volkswagen’s ID.4 EV features 9 or 12 battery modules within a battery pack, showcasing the importance of efficient module management. This approach extends battery life, improves thermal performance, and enhances fault tolerance. With BEAM’s Eco Mode, drivers enjoy better efficiency without losing performance. Additionally, real-time alerts and notifications are displayed to keep drivers informed about battery usage, thermal conditions, and suggestions for optimal driving.
 
 # Current-Generation Performance Mode
 
