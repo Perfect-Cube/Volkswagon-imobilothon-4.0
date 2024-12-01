@@ -1,12 +1,13 @@
 ![maaf-kijiyega-mujhe-bolna-nhi-aata-amitabh-bachhan-meme](https://github.com/user-attachments/assets/4e5e7faa-b449-4721-b2c2-625eaa03d92d)
 
 # Introduction and Problem Statement
+Good Morning Respected Leaders and Esteemed members
 Electric vehicles are seen as the future of sustainable transportation,Volkswagen, a pioneer in innovation, is also at the forefront of this movement, with its ID.4 electric car recently launched in India.but they face critical challenges that limit their potential. Issues like battery inefficiency, motor performance problems, and poor user experience contribute to battery degradation and range anxiety.These limitations prevent EVs from becoming the mainstream choice. Our project, BEAM, addresses these challenges by introducing advanced AI solutions to improve battery health, extend lifespan, and optimize motor efficiency.
 
 # BEAM’s Modes: Eco and Performance
 "To tackle these challenges and provide a superior driving experience, BEAM offers two advanced modes: Eco Mode and Performance Mode. Both modes are powered by intelligent and bio inspired algorithms designed to optimize battery and motor performance while ensuring the best balance of efficiency and driving satisfaction."
 # architecture
-The workflow begins with real-time sensor data from EVs and human feedback, which are preprocessed. This processed data is fed into a trained AI model that learns patterns and predicts optimal configurations for vehicle performance. A fine-tuned Large Language Model (LLM) further refines these insights, generating personalized recommendations and alerts. The system employs metaheuristic and reinforcement learning algorithms, such as the Sidewinder Snake Algorithm for battery-efficient mode and Proximal Policy Optimization (PPO) for performance mode. These optimizations are monitored in real time, and the feedback loop reinforces model improvements. The final output includes analyzed reports, actionable feedback, and advanced voice alerts delivered through a user-friendly interface, ensuring continuous monitoring and optimal EV performance.
+The process starts with sensor data from EVs and human feedback, which are preprocessed to extract key features. This data trains an AI model to learn patterns and optimize vehicle performance. A fine-tuned LLM enhances these insights, delivering personalized recommendations and alerts. Metaheuristic and reinforcement learning algorithms, like the Sidewinder Snake Algorithm for battery efficiency and PPO for motor performance, ensure real-time optimization. The system continuously monitors and improves through feedback loops, providing reports, actionable insights, and voice alerts via a user-friendly interface for optimal EV performance.
 
 # Simulation with User Input via Streamlit
 "To demonstrate BEAM’s capabilities, we’ve built an interactive simulation using Streamlit. Instead of relying on live sensor data, we take user input to simulate real-world conditions.This allows users to experience the benefits of BEAM’s intelligent algorithms and see how they affect battery health and motor performance in real-time.
@@ -27,3 +28,6 @@ The workflow begins with real-time sensor data from EVs and human feedback, whic
 
 # LLM-Powered Monitoring
 "To enhance user experience, BEAM integrates a fine-tuned LLaMA 8B model. This system monitors battery health, performance metrics, and driving conditions, providing real-time insights. It gives voice alerts and notifications to guide drivers, ensuring they stay informed about critical updates and driving tips. Alerts are mode-specific, providing relevant insights for either Eco or Performance mode."
+
+# tech stack
+Talking about the tech stack of our project, we are using the GYM library to create a simulated environment and learning agent. For fine-tuning the Llama model, we utilize the GROQ library by calling its API. Additionally, we employ Stable-Baselines3, which provides pre-built reinforcement learning algorithms. For text-to-speech generation, we use the Transformers library with Microsoft's SpeechT5 model. Finally, we leverage the Datasets library, which offers a seamless way to access and manage datasets for training machine learning models.
