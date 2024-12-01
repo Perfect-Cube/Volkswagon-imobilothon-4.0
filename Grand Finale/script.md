@@ -31,3 +31,6 @@ The process starts with sensor data from EVs and human feedback, which are prepr
 
 # tech stack
 Talking about the tech stack of our project, we are using the GYM library to create a simulated environment and learning agent. For fine-tuning the Llama model, we utilize the GROQ library by calling its API. Additionally, we employ Stable-Baselines3, which provides pre-built reinforcement learning algorithms. For text-to-speech generation, we use the Transformers library with Microsoft's SpeechT5 model. Finally, we leverage the Datasets library, which offers a seamless way to access and manage datasets for training machine learning models.
+
+# script
+Talking about the challenges and limitations, our project is currently running in a controlled simulated environment. However, in the real world, sensor data can be more complex and variable. Secondly, our project relies on standard charging stations, but using non-standard stations could impact battery life and performance. Thirdly, unpredictable user inputs and driving habits may affect the accuracy of BEAM recommendations. Lastly, the limited computational power of car hardware could restrict the full implementation of BEAM in real-time scenarios.
