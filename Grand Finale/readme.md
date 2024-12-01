@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/08391f73-aebc-49ca-981a-fcebd01d8be0
 
 ![sidewinder vs normal- battery](https://github.com/user-attachments/assets/e11d57c5-a2bf-4783-99e1-286d0a0162ef)
 
-![sidewinder vs normal- distance](https://github.com/user-attachments/assets/8f0f0469-823d-4d0f-89e6-648433a16888)
+![image](https://github.com/user-attachments/assets/7a4167dc-e608-43e9-8edd-182521f6b0cc)
 
 ![PPO vs Normal- temperature](https://github.com/user-attachments/assets/3e365fa0-58b0-4cd0-a37f-5abea13c51ce)
 
