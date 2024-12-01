@@ -10,6 +10,7 @@
 https://github.com/user-attachments/assets/08391f73-aebc-49ca-981a-fcebd01d8be0
 
 
+![Regenerative braking](https://github.com/user-attachments/assets/40613873-4bd0-45db-8c1b-45b133d5380a)
 
 
 
