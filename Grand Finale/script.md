@@ -32,6 +32,8 @@ The process starts with sensor data from EVs and human feedback, which are prepr
 # LLM-Powered Monitoring
 "To enhance user experience, BEAM integrates a fine-tuned LLaMA 8B model. This system monitors battery health, performance metrics, and driving conditions, providing real-time insights. It gives voice alerts and notifications to guide drivers, ensuring they stay informed about critical updates and driving tips. Alerts are mode-specific, providing relevant insights for either Eco or Performance mode."
 
+Now bhaskar will tell about the results of our project
+
 # graph-BHASKAR
 The Wave-like strategy, also known as Sidewinder, excels in maintaining lower battery temperatures compared to the Linear strategy, reducing overheating risks while enhancing battery life. It supports extended range by covering more distance per cycle and retains a higher battery charge for improved longevity. On the other hand, Proximal Policy Optimization, or PPO, ensures superior thermal management by dynamically keeping EV temperatures low. It optimizes battery usage better than traditional rule-based methods, retaining a longer charge. PPO also adjusts speed dynamically based on road conditions, enabling EVs to cover longer distances efficiently on the same charge. Both approaches highlight innovative steps toward EV performance and sustainability.
 
