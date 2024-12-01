@@ -44,3 +44,8 @@ Talking about the tech stack of our project, we are using the GYM library to cre
 
 # LIMITATION-VERMA
 Talking about the challenges and limitations, our project is currently running in a controlled simulated environment. However, in the real world, sensor data can be more complex and variable. Secondly, our project relies on standard charging stations, but using non-standard stations could impact battery life and performance. Thirdly, unpredictable user inputs and driving habits may affect the accuracy of BEAM recommendations. Lastly, the limited computational power of car hardware could restrict the full implementation of BEAM in real-time scenarios.
+
+
+
+
+BEAM delivers significant improvements in battery efficiency, lifespan, and user experience. Drivers benefit from extended battery life, reduced energy waste, and a seamless blend of performance and efficiency. By combining AI-driven innovation with practical EV solutions, BEAM sets a new benchmark for electric vehicles, making them more sustainable, efficient, and user-friendly." Thank You
