@@ -6,7 +6,8 @@ Electric vehicles are seen as the future of sustainable transportation,Volkswage
 
 # BEAM’s Modes: Eco and Performance
 "To tackle these challenges and provide a superior driving experience, BEAM offers two advanced modes: Eco Mode and Performance Mode. Both modes are powered by intelligent and bio inspired algorithms designed to optimize battery and motor performance while ensuring the best balance of efficiency and driving satisfaction."
-# architecture
+
+# architecture ---VERMA
 The process starts with sensor data from EVs and human feedback, which are preprocessed to extract key features. This data trains an AI model to learn patterns and optimize vehicle performance. A fine-tuned LLM enhances these insights, delivering personalized recommendations and alerts. Metaheuristic and reinforcement learning algorithms, like the Sidewinder Snake Algorithm for battery efficiency and PPO for motor performance, ensure real-time optimization. The system continuously monitors and improves through feedback loops, providing reports, actionable insights, and voice alerts via a user-friendly interface for optimal EV performance.
 
 # Simulation with User Input via Streamlit
@@ -29,8 +30,11 @@ The process starts with sensor data from EVs and human feedback, which are prepr
 # LLM-Powered Monitoring
 "To enhance user experience, BEAM integrates a fine-tuned LLaMA 8B model. This system monitors battery health, performance metrics, and driving conditions, providing real-time insights. It gives voice alerts and notifications to guide drivers, ensuring they stay informed about critical updates and driving tips. Alerts are mode-specific, providing relevant insights for either Eco or Performance mode."
 
-# tech stack
+# graph-BHASKAR
+The Wave-like strategy, also known as Sidewinder, excels in maintaining lower battery temperatures compared to the Linear strategy, reducing overheating risks while enhancing battery life. It supports extended range by covering more distance per cycle and retains a higher battery charge for improved longevity. On the other hand, Proximal Policy Optimization, or PPO, ensures superior thermal management by dynamically keeping EV temperatures low. It optimizes battery usage better than traditional rule-based methods, retaining a longer charge. PPO also adjusts speed dynamically based on road conditions, enabling EVs to cover longer distances efficiently on the same charge. Both approaches highlight innovative steps toward EV performance and sustainability.
+
+# tech stack-VERMA
 Talking about the tech stack of our project, we are using the GYM library to create a simulated environment and learning agent. For fine-tuning the Llama model, we utilize the GROQ library by calling its API. Additionally, we employ Stable-Baselines3, which provides pre-built reinforcement learning algorithms. For text-to-speech generation, we use the Transformers library with Microsoft's SpeechT5 model. Finally, we leverage the Datasets library, which offers a seamless way to access and manage datasets for training machine learning models.
 
-# script
+# LIMITATION-VERMA
 Talking about the challenges and limitations, our project is currently running in a controlled simulated environment. However, in the real world, sensor data can be more complex and variable. Secondly, our project relies on standard charging stations, but using non-standard stations could impact battery life and performance. Thirdly, unpredictable user inputs and driving habits may affect the accuracy of BEAM recommendations. Lastly, the limited computational power of car hardware could restrict the full implementation of BEAM in real-time scenarios.
