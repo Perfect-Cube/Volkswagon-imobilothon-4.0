@@ -5,6 +5,8 @@ Electric vehicles are seen as the future of sustainable transportation,Volkswage
 
 # BEAM’s Modes: Eco and Performance
 "To tackle these challenges and provide a superior driving experience, BEAM offers two advanced modes: Eco Mode and Performance Mode. Both modes are powered by intelligent and bio inspired algorithms designed to optimize battery and motor performance while ensuring the best balance of efficiency and driving satisfaction."
+# architecture
+The workflow begins with real-time sensor data from EVs and human feedback, which are preprocessed to clean, normalize, and extract relevant features. This processed data is fed into a trained AI model that learns patterns and predicts optimal configurations for vehicle performance. A fine-tuned Large Language Model (LLM) further refines these insights, generating personalized recommendations and alerts. The system employs metaheuristic and reinforcement learning algorithms, such as the Sidewinder Snake Algorithm for battery-efficient mode and Proximal Policy Optimization (PPO) for performance mode. These optimizations are monitored in real time, and the feedback loop reinforces model improvements. The final output includes analyzed reports, actionable feedback, and advanced voice alerts delivered through a user-friendly interface, ensuring continuous monitoring and optimal EV performance.
 
 # Simulation with User Input via Streamlit
 "To demonstrate BEAM’s capabilities, we’ve built an interactive simulation using Streamlit. Instead of relying on live sensor data, we take user input to simulate real-world conditions.This allows users to experience the benefits of BEAM’s intelligent algorithms and see how they affect battery health and motor performance in real-time.
