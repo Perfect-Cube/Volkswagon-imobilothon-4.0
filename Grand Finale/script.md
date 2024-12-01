@@ -37,6 +37,8 @@ Now bhaskar will tell about the results of our project
 # graph-BHASKAR
 Analyzing the results,The Wave-like strategy, also known as Sidewinder, excels in maintaining lower battery temperatures compared to the Linear strategy, reducing overheating risks while enhancing battery life. It supports extended range by covering more distance per cycle and retains a higher battery charge for improved longevity. On the other hand, Proximal Policy Optimization, or PPO, ensures superior thermal management by dynamically keeping EV temperatures low. It optimizes battery usage better than traditional rule-based methods, retaining a longer charge. PPO also adjusts speed dynamically based on road conditions, enabling EVs to cover longer distances efficiently on the same charge. Both approaches highlight innovative steps toward EV performance and sustainability.
 
+Now Ayush will tell about our tech stack and Limitation
+
 # tech stack-VERMA
 Talking about the tech stack of our project, we are using the GYM library to create a simulated environment and learning agent. For fine-tuning the Llama model, we utilize the GROQ library by calling its API. Additionally, we employ Stable-Baselines3, which provides pre-built reinforcement learning algorithms. For text-to-speech generation, we use the Transformers library with Microsoft's SpeechT5 model. Finally, we leverage the Datasets library, which offers a seamless way to access and manage datasets for training machine learning models.
 
