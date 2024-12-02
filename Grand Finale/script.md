@@ -1,7 +1,11 @@
 ![maaf-kijiyega-mujhe-bolna-nhi-aata-amitabh-bachhan-meme](https://github.com/user-attachments/assets/4e5e7faa-b449-4721-b2c2-625eaa03d92d)
 
+
+Good morning respected leaders and esteemed members, I'm gratefull for the opportunity to present before you today
+
+My name is Aakarshit srivastava, sitting to my right bhaskar banerjee and to my left ayush verma, we are team PERFECT CUBE and we are here to present our project BEAM : Battery Efficiency and AI Motor optimization.
 # Introduction and Problem Statement
-Electric vehicles are seen as the future of sustainable transportation,Volkswagen, a pioneer in innovation, is also at the forefront of this movement, with its ID.4 electric car recently launched in India.but they face critical challenges that limit their potential. Issues like battery inefficiency, motor performance problems, and poor user experience contribute to battery degradation and range anxiety.These limitations prevent EVs from becoming the mainstream choice. Our project, BEAM, addresses these challenges by introducing advanced AI solutions to improve battery health, extend lifespan, and optimize motor efficiency.
+So in today's world, electric vehicles are seen as the future of sustainable transportation,Volkswagen, a pioneer in innovation, is also at the forefront of this movement, with its ID.4 electric car recently launched in India.but they face critical challenges that limit their potential. Issues like battery inefficiency, motor performance problems, and poor user experience contribute to battery degradation and range anxiety.These limitations prevent EVs from becoming the mainstream choice. Our project, BEAM, addresses these challenges by introducing advanced AI solutions to improve battery health, extend lifespan, and optimize motor efficiency.
 
 # BEAM’s Modes: Eco and Performance
 "To tackle these challenges and provide a superior driving experience, BEAM offers two advanced modes: Eco Mode and Performance Mode. Both modes are powered by intelligent and bio inspired algorithms designed to optimize battery and motor performance while ensuring the best balance of efficiency and driving satisfaction."
@@ -39,7 +43,7 @@ Analyzing the results,The Wave-like strategy, also known as Sidewinder, excels i
 Now Ayush will tell about our tech stack and Limitation
 
 # tech stack-VERMA
-Talking about the tech stack of our project, we are using the GYM library to create a simulated environment and learning agent. For fine-tuning the Llama model, we utilize the GROQ library by calling its API. Additionally, we employ Stable-Baselines3, which provides pre-built reinforcement learning algorithms. For text-to-speech generation, we use the Transformers library with Microsoft's SpeechT5 model. Finally, we leverage the Datasets library, which offers a seamless way to access and manage datasets for training machine learning models.
+Talking about the tech stack of our project, we are using the GYM library to create a simulated environment and learning agent. we are utilizing GROQ's inference API with a fine tune Llama 3 8B Model. Additionally, we employ Stable-Baselines3, which provides pre-built reinforcement learning algorithms. For text-to-speech generation, we use the Transformers library with Microsoft's SpeechT5 model. Finally, we leverage the Datasets library, which offers a seamless way to access and manage datasets for training machine learning models.
 
 # LIMITATION-VERMA
 Talking about the challenges and limitations, our project is currently running in a controlled simulated environment. However, in the real world, sensor data can be more complex and variable. Secondly, our project relies on standard charging stations, but using non-standard stations could impact battery life and performance. Thirdly, unpredictable user behaviour and driving habits may affect the accuracy of BEAM recommendations. Lastly, the limited computational power of car hardware could restrict the full implementation of BEAM in real-time scenarios.
