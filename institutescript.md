@@ -1,5 +1,8 @@
 ### *Script for the Institute Presentation (Shortened Version)*
 
+
+My name is Aakarshit srivastava, sitting to my right bhaskar banerjee and to my left ayush verma, we are team PERFECT CUBE and we are here to present our project BEAM : Battery Efficiency and AI Motor optimization.
+
 #### *Part 1: Discovering the Hackathon (Speaker 1)*  
 “Hackathons have always been a way for us to challenge ourselves and grow. We discovered Volkswagen I.mobilothon 4.0 through Unstop and LinkedIn, platforms we actively use to find such opportunities. With our past experiences in various hackathons, we were excited to tackle this challenge and bring our innovative ideas to the forefront.”
 
