@@ -8,6 +8,9 @@
 
 https://github.com/user-attachments/assets/cc13c4f7-b07c-427e-84bf-82b486f7b1e7
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b15f9bf8-8079-4285-b431-593ae60dfdbf" alt="BEAM architecture" width="300">
+</div>
 
 
 https://github.com/user-attachments/assets/08391f73-aebc-49ca-981a-fcebd01d8be0
