@@ -21,6 +21,10 @@ https://github.com/user-attachments/assets/08391f73-aebc-49ca-981a-fcebd01d8be0
 </div>
 
 
+![Screenshot 2025-02-25 at 10-28-23 Regenerative Braking ](https://github.com/user-attachments/assets/6064e2f5-dd41-4552-86f5-3fb781d4ac2d)
+
+
+
 ![sidewinder vs normal- temperature](https://github.com/user-attachments/assets/9a28a8fc-83fe-4123-a36b-8c1a043477d0)
 
 ![sidewinder vs normal- battery](https://github.com/user-attachments/assets/e11d57c5-a2bf-4783-99e1-286d0a0162ef)
